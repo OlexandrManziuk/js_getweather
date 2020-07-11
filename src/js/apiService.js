@@ -1,14 +1,14 @@
-// Переменные для пагинов
+// Переменные пагинов
 import axios from 'axios';
 
-// Переменные для обработки погоды
+// Переменные обработки погоды
 let location = '';
 let req = '';
 let oneDayData = {};
 let fiveDayData = {};
 let moreInfoData = {};
 
-// Переменные для api
+// Переменные API
 const OWM = 'https://api.openweathermap.org/data/2.5/';
 const apiKey = '48f3906fa74131a752b29b56bb64ec12';
 

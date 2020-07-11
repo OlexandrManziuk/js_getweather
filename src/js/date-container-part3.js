@@ -25,14 +25,18 @@ const intervalId = setInterval(() => {
     ? moment(date).utcOffset(api.oneDayData.timezone / 60)
     : moment(date);
   const dayNow = date.getDate();
-     
-  const weekDayNow = new Intl.DateTimeFormat('en', {weekday: 'short' }).format(date);
+
+  const weekDayNow = new Intl.DateTimeFormat('en', { weekday: 'short' }).format(
+    date,
+  );
 
   dayNowRef.innerHTML = `${dayNow}<sup class="date__day--nth">${nth(
     dayNow,
-  )}</sup> ${weekDayNow}`;  
-  
-  monthNowRef.textContent = new Intl.DateTimeFormat('en', { month: 'long' }).format(date);
+  )}</sup> ${weekDayNow}`;
+
+  monthNowRef.textContent = new Intl.DateTimeFormat('en', {
+    month: 'long',
+  }).format(date);
   timeNowRef.textContent =
     pad(changeDate.hours()) +
     ':' +
